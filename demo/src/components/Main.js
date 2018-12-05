@@ -118,6 +118,7 @@ export default class Main extends Component {
         },
       },
       datePickerInternational: null,
+      showCalendar: true,
       locale: 'ja',
       dateRangePicker: {
         selection: {
@@ -273,8 +274,12 @@ export default class Main extends Component {
               readOnly
               value={formatDateDisplay(this.state.datePickerInternational)}
             />
+            <button onClick={() => this.setState({ showCalendar: !this.state.showCalendar })}>
+              Hide/show
+            </button>
           </div>
           <Calendar
+            showCalendar={this.state.showCalendar}
             locale={rdrLocales[this.state.locale]}
             date={this.state.datePickerInternational}
             onChange={this.handleChange.bind(this, 'datePickerInternational')}

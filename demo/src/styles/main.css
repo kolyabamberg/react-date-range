@@ -23,6 +23,14 @@
 .Demo-description {
 }
 
+.Demo-description button {
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #dadada;
+  height: 35px;
+  cursor: pointer;
+}
+
 .label{
   padding-right: 30px;
   font-weight: bold;
