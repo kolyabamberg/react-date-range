@@ -66,6 +66,7 @@ export default class Main extends Component {
 
     this.state = {
       dateRange: {
+        showCalendar: true,
         selection: {
           startDate: new Date(),
           endDate: null,
@@ -87,6 +88,7 @@ export default class Main extends Component {
         },
       },
       dateRangePickerI: {
+        show: true,
         selection: {
           startDate: new Date(),
           endDate: null,
@@ -121,6 +123,7 @@ export default class Main extends Component {
       showCalendar: true,
       locale: 'ja',
       dateRangePicker: {
+        show: true,
         selection: {
           startDate: new Date(),
           endDate: addDays(new Date(), 7),
@@ -163,9 +166,21 @@ export default class Main extends Component {
               readOnly
               value={formatDateDisplay(this.state.dateRangePicker.selection.endDate)}
             />
+            <button
+              onClick={() =>
+                this.setState({
+                  dateRangePicker: {
+                    ...this.state.dateRangePicker,
+                    show: !this.state.dateRangePicker.show,
+                  },
+                })
+              }>
+              Hide/show
+            </button>
           </div>
           <div>
             <DateRangePicker
+              show={this.state.dateRangePicker.show}
               onChange={this.handleRangeChange.bind(this, 'dateRangePicker')}
               showSelectionPreview={true}
               moveRangeOnFirstSelection={false}
@@ -299,9 +314,21 @@ export default class Main extends Component {
               readOnly
               value={formatDateDisplay(this.state.dateRange.selection.endDate, 'Continuous')}
             />
+            <button
+              onClick={() =>
+                this.setState({
+                  dateRange: {
+                    ...this.state.dateRange,
+                    showCalendar: !this.state.dateRange.showCalendar,
+                  },
+                })
+              }>
+              Hide/show
+            </button>
           </div>
 
           <DateRange
+            showCalendar={this.state.dateRange.showCalendar}
             onChange={this.handleRangeChange.bind(this, 'dateRange')}
             moveRangeOnFirstSelection={false}
             ranges={[this.state.dateRange.selection]}

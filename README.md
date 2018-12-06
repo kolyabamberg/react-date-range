@@ -99,6 +99,8 @@ class MyComponent extends Component {
 
 Property                             | type      | Default Value    | Desctiption
 -------------------------------------|-----------|------------------|-----------------------------------------------------------------
+showCalendar                         | Boolean   | true             | defines show or hide Calendar
+show                                 | Boolean   | true             | defines show or hide DateRangePicker
 locale                               | Object    | enUS from locale | you can view full list from [here](https://github.com/Adphorus/react-date-range/tree/next/src/locale/index.js). Locales directly exported from [`date-fns/locales`](https://date-fns.org/v2.0.0-alpha.7/docs/I18n#supported-languages).
 className                            | String    |                  | wrapper classname
 months                               | Number    | 1                | rendered month count

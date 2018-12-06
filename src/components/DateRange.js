@@ -112,6 +112,7 @@ class DateRange extends Component {
   render() {
     return (
       <Calendar
+        showCalendar={this.state.showCalendar}
         focusedRange={this.state.focusedRange}
         onRangeFocusChange={this.handleRangeFocusChange}
         preview={this.state.preview}
