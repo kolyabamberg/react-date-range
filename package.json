@@ -1,8 +1,9 @@
 {
-  "name": "react-date-range",
-  "version": "1.0.0-beta",
+  "name": "react-date-range-kg",
+  "version": "1.0.1-beta",
   "description": "A React component for choosing dates and date ranges.",
   "main": "dist/index.js",
+  "author": "https://github.com/mkg0, https://github.com/kolyabamberg",
   "scripts": {
     "dev": "NODE_ENV=development & webpack-dev-server --hot --inline",
     "clear": "rm -rf dist/* & rm -rf demo/dist/*",
